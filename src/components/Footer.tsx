@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { COMPANY_INFO, SECTORS } from '../data/conglomerateData';
 import { SectorId } from '../types';
+import { BrandLogo } from './BrandLogo';
 
 interface FooterProps {
   onSelectSector: (sector: SectorId) => void;
@@ -49,9 +50,7 @@ export const Footer: React.FC<FooterProps> = ({
           {/* Brand & Mission Column */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-amber-700 text-slate-950 font-black text-lg shadow-lg shadow-amber-500/20 border border-amber-400/40">
-                KS
-              </div>
+              <BrandLogo size="md" />
               <div>
                 <span className="text-lg font-black text-white font-['Outfit'] tracking-tight block">
                   {COMPANY_INFO.name}

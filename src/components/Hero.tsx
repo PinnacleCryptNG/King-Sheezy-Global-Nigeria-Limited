@@ -14,6 +14,7 @@ import {
 import { SectorId } from '../types';
 import { COMPANY_INFO, SECTORS } from '../data/conglomerateData';
 import { generateWhatsAppUrl } from '../utils/formatters';
+import { BrandLogo } from './BrandLogo';
 
 interface HeroProps {
   currentSector: SectorId;
@@ -84,12 +85,12 @@ export const Hero: React.FC<HeroProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-7">
           
-          {/* Accreditation Pill Badge */}
+          {/* Accreditation Pill Badge with Royal Insignia */}
           <div 
             id="hero-accreditation-badge"
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-700 shadow-md backdrop-blur-md"
+            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-700 shadow-md backdrop-blur-md"
           >
-            <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+            <BrandLogo size="xs" />
             <span className="text-xs font-semibold tracking-wide text-slate-200">
               CAC Incorporated Conglomerate • <span className="text-amber-400 font-mono font-bold">{COMPANY_INFO.cacNumber}</span>
             </span>

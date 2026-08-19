@@ -17,6 +17,7 @@ import {
 } from 'lucide-react';
 import { Currency, SectorId } from '../types';
 import { COMPANY_INFO, SECTORS } from '../data/conglomerateData';
+import { BrandLogo } from './BrandLogo';
 
 interface NavbarProps {
   currentSector: SectorId;
@@ -78,15 +79,13 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           
-          {/* Brand Identity - Clean Single Line Lockup */}
+          {/* Brand Identity - Crowned Insignia & Single Line Lockup */}
           <a 
             href="#" 
             id="brand-logo-link"
             className="flex items-center gap-3 group shrink-0 focus:outline-none"
           >
-            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-amber-500 to-amber-600 text-slate-950 font-black text-sm tracking-tight shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform border border-amber-400/40">
-              KS
-            </div>
+            <BrandLogo size="sm" />
             <div className="flex items-center gap-2">
               <span className="text-base sm:text-lg font-black tracking-tight text-white font-['Outfit'] group-hover:text-amber-400 transition-colors whitespace-nowrap">
                 KING SHEEZY

@@ -3,6 +3,7 @@ import { MessageCircle, X, ChevronRight, UtensilsCrossed, Sparkles, Sprout, Shir
 import { COMPANY_INFO, SECTORS } from '../data/conglomerateData';
 import { generateWhatsAppUrl } from '../utils/formatters';
 import { SectorId } from '../types';
+import { BrandLogo } from './BrandLogo';
 
 export const WhatsAppFloatingButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -51,8 +52,8 @@ export const WhatsAppFloatingButton: React.FC = () => {
           {/* Header */}
           <div className="p-4 bg-emerald-700 text-white flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="relative w-9 h-9 rounded-full bg-slate-950 flex items-center justify-center text-amber-400 font-bold text-xs border border-emerald-400/40">
-                <span>KS</span>
+              <div className="relative w-9 h-9 rounded-full bg-slate-950 flex items-center justify-center p-0.5 border border-emerald-400/40">
+                <BrandLogo size="xs" />
                 <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-slate-950" />
               </div>
               <div>
